@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BP Centile</title>
-    <link rel="stylesheet" href="qcss.css">
+    <title>BMI Centiles</title>
     <link rel="stylesheet" href="code.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -22,11 +21,69 @@
 </div>
 
 <div id="fcontent" class="content">
-  <p>Comming soon ...!</p>
+  <div>
+    <p class="banner">Gender</p>
+</div>
+<select id="gender" class="selection" >   
+    <option value="0" class="hidden">Please Select</option>
+    <option value="1">Male</option>
+    <option value="2">Female</option>
+</select>
+<div>
+    <p id="gmessage" class="worning"></p>
+</div> 
+<div>
+<p class="banner">Age</p>
+</div> 
+<select id="age" class="selection" >   
+<option value="0" class="hidden">Please Select</option>
+
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="13">14</option>
+</select>
+<div>
+<p id="agemessage" class="worning"></p>
+</div> 
+<div>
+<p class="banner">Height (cm)</p>
+</div>
+<input type="number" id="hdata" class="selection" placeholder="">
+<div>
+<p id="hmessage" class="worning"></p>
 </div>
 
+
+<div>
+<p class="banner">Weight (Kg)</p>
+</div>
+<input type="number" id="wdata" class="selection" placeholder="">
+<div>
+<p id="wmessage" class="worning"></p>
+</div>
+
+
+
+
+<button class="qbtn" onclick="calbmi()">Calculate</button>
 </br>
+<div class="area" >
+<h4 id="bmimsg"></h4>
+<h4 id="cmessage"></h4>
+<h4 id="target"></h4>
+</div>
 </br>
+
 </br>
 </br>
 </br>
@@ -44,7 +101,7 @@
 <a href="about.html"><p>About Us</p></a>
 </div>
 </div>
-<script src="script.js"></script>
+<script src="bmi.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
