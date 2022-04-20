@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QTC In ECG</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/qtc.css">
+</head>
+<body>
+
+<div class="header" id="myHeader">
+    <div class="top-img">
+        <a href="index.html">
+        <img src="img/back.svg" alt="">
+        </a>
+      </div>
+      <div class="top-data">
+       <h3>QTC In ECG</h3>
+      </div>
+</div>
+
+<div id="fcontent" class="content">
+    <img src="img/qtc.jpg" alt="">
+    
+<p class="banner">QT Intervel (small squres)</p>
+<input type="number" id="qt" class="selection" placeholder="">
+</br>
+</br>
+<p class="banner">RR Interval (small squres)</p>
+<input type="number" id="rr" class="selection" placeholder="">
+</br>
+</br>
+<button class="qbtn" onclick="qtc()">Calculate</button>
+
+</br>
+<h3 id="qtcresult"></h3>
+
+
+</div>
+</br></br></br></br></br>
+
+
+
+
+<div class="footer">
+<div class="donate">
+<a href="https://childcal.github.io/update.html"><p>Update</p></a>
+</div>
+<div class="about">
+<a href="about.html"><p>About Us</p></a>
+</div>
+</div>
+<script src="js/qtc.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

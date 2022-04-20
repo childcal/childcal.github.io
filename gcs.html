@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gcs.css">
+</head>
+<body>
+
+<div class="header" id="myHeader">
+    <div class="top-img">
+        <a href="index.html">
+        <img src="img/back.svg" alt="">
+        </a>
+      </div>
+      <div class="top-data">
+       <h3>GCS</h3>
+      </div>
+</div>
+
+<div id="fcontent" class="content">
+
+    <div class="top" id="eyeTop" onclick="eyeFun()">
+        <p>Eye Opening Response</p>
+        <div class="value">
+            <p id="eyeValue"></p>
+        </div>
+    </div>
+    <div class="page" id="eyePage">
+        
+            <div class="control-group">
+          
+                <input type="radio"   id="eye1" onclick="fEye1()"/>
+                <label for="eye1">Spontaneously</label>
+          
+            <hr>
+                <input type="radio"   id="eye2" onclick="fEye2()"/>
+                <label for="eye2">To speech</label>
+          <hr>
+
+                <input type="radio"   id="eye3" onclick="fEye3()"/>
+                <label for="eye3">To pain</label>
+
+            <hr>
+
+                <input type="radio"   id="eye4" onclick="fEye4()"/>
+                <label for="eye4">No response</label>  
+              
+              
+            </div>   
+
+    </div>
+
+    <div class="top" id="verbalTop" onclick="verbalFun()">
+        <p>Verbal Response</p>
+        <div class="value">
+            <p id="verbalValue"></p>
+        </div>
+    </div>
+    <div class="page" id="verbalPage">
+        
+            <div class="control-group">
+          
+                <input type="radio"   id="verbal1" onclick="fVerbal1()"/>
+                <label for="verbal1">Well oriented </label>
+          
+            <hr>
+
+                <input type="radio"   id="verbal2" onclick="fVerbal2()"/>
+                <label for="verbal2">Confused </label>
+          
+            <hr>
+
+                <input type="radio"   id="verbal3" onclick="fVerbal3()"/>
+                <label for="verbal3">Inappriate words </label>
+
+            <hr>
+
+
+                <input type="radio"   id="verbal4" onclick="fVerbal4()"/>
+                <label for="verbal4">Incomprehensible sounds</label>
+
+            <hr>
+
+                <input type="radio"   id="verbal5" onclick="fVerbal5()"/>
+                <label for="verbal5">No response</label>
+
+            </br>
+              
+              
+            </div>   
+
+    </div>
+
+    <div class="top" id="motorTop" onclick="motorFun()">
+        <p>Motor Response</p>
+        <div class="value">
+            <p id="motorValue"></p>
+        </div>
+    </div>
+    <div class="page" id="motorPage">
+        
+            <div class="control-group">
+          
+                <input type="radio"   id="motor1" onclick="fMotor1()"/>
+                <label for="motor1">Obeys command</label>
+          
+            <hr>
+
+                <input type="radio"   id="motor2" onclick="fMotor2()"/>
+                <label for="motor2">Moves to localized pain</label>
+          
+            <hr>
+
+                <input type="radio"   id="motor3" onclick="fMotor3()"/>
+                <label for="motor3">Flex to withdraw from pain</label>
+
+            <hr>
+
+                <input type="radio"   id="motor4" onclick="fMotor4()"/>
+                <label for="motor4">Abnormal flexion</label>
+
+            <hr>
+
+                <input type="radio"   id="motor5" onclick="fMotor5()"/>
+                <label for="motor5">Abnormal extension</label>
+
+            <hr>
+
+
+                <input type="radio"   id="motor6" onclick="fMotor6()"/>
+                <label for="motor6">No response</label>
+
+            </br>
+                
+              
+            </div>   
+
+    </div>
+    <div class="gcsarea">
+    <div id="gcs" >
+        <h3><strong>GCS is-</strong></h3>
+        <h3 id="total"></h3><h3>/15</h3>
+    </div>
+    </div>
+
+    
+</div>
+
+</br>
+</br>
+</br>
+
+
+
+<div class="footer">
+<div class="donate">
+<a href="https://childcal.github.io/update.html"><p>Update</p></a>
+</div>
+<div class="about">
+<a href="about.html"><p>About Us</p></a>
+</div>
+</div>
+<script src="js/gcs.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
