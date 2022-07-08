@@ -39,7 +39,7 @@ function ivFluid(){
     }
 
     if(tp==2){
-        if(wt<10){
+        if(wt<10.1){
         document.getElementById("display").style.visibility = "visible";
         document.getElementById("cmessage").innerHTML = parseFloat(mfull10).toFixed(2);
         }
@@ -60,7 +60,7 @@ function ivFluid(){
     }
 
     if(tp==3){
-        if(wt<10){
+        if(wt<10.1){
         document.getElementById("display").style.visibility = "visible";
         document.getElementById("cmessage").innerHTML = parseFloat(mfull10+d50).toFixed(2);
         }
@@ -81,7 +81,7 @@ function ivFluid(){
     }
 
     if(tp==4){
-        if(wt<10){
+        if(wt<10.1){
         document.getElementById("display").style.visibility = "visible";
         document.getElementById("cmessage").innerHTML = parseFloat(mfull10+d70).toFixed(2);
         }
@@ -102,7 +102,7 @@ function ivFluid(){
     }
 
     if(tp==5){
-        if(wt<10){
+        if(wt<10.1){
         document.getElementById("display").style.visibility = "visible";
         document.getElementById("cmessage").innerHTML = parseFloat(mfull10+d100).toFixed(2);
         }
@@ -126,3 +126,13 @@ function ivFluid(){
 
 
 }
+
+
+
+var input = document.getElementById("wdata");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("calculate").click();
+  }
+});

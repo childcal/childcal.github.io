@@ -486,8 +486,15 @@ function ideal(){
     }
 
  
-    
-
-
-
 }
+
+
+
+
+var input = document.getElementById("hdata");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("calculate").click();
+  }
+});

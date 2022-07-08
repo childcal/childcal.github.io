@@ -1146,9 +1146,14 @@ function calbmi(){
     }
 
 
-
-
-
-
-
 }
+
+
+
+var input = document.getElementById("wdata");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("calculate").click();
+  }
+});

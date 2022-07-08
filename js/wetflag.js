@@ -55,7 +55,13 @@ if(wt>1){
 }
 
 
-
-
-
 }
+
+
+var input = document.getElementById("weit");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("calculate").click();
+  }
+});
