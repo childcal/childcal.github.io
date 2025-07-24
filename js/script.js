@@ -63,7 +63,7 @@ function cal(){
     if (g==1 && a==1){
         if (h<68.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -83,7 +83,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>68 && h<72.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -103,7 +103,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>72 && h<74.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -123,7 +123,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>74 && h<78.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -143,7 +143,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>78 && h<82.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -163,7 +163,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>82 && h<100.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -183,7 +183,7 @@ function cal(){
     if (g==1 && a==1){
         if (h>100){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -203,7 +203,7 @@ function cal(){
     if (g==1 && a==2){
         if (h<78.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -223,7 +223,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>78 && h<81.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -243,7 +243,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>81 && h<85.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -263,7 +263,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>85 && h<91.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -283,7 +283,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>91 && h<95.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -303,7 +303,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>95 && h<105.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -323,7 +323,7 @@ function cal(){
     if (g==1 && a==2){
         if (h>105){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -343,7 +343,7 @@ function cal(){
     if (g==1 && a==3){
         if (h<85.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -363,7 +363,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>85 && h<88.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -383,7 +383,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>88 && h<92.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -403,7 +403,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>92 && h<100.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -423,7 +423,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>100 && h<105.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -443,7 +443,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>105 && h<115.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile within 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : within 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -463,7 +463,7 @@ function cal(){
     if (g==1 && a==3){
         if (h>115){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -483,7 +483,7 @@ function cal(){
     if (g==1 && a==4){
         if (h<90.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -503,7 +503,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>90 && h<93.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -523,7 +523,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>93 && h<99.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -543,7 +543,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>99 && h<107.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -563,7 +563,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>107 && h<114.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -583,7 +583,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>114 && h<120.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -603,7 +603,7 @@ function cal(){
     if (g==1 && a==4){
         if (h>120){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -623,7 +623,7 @@ function cal(){
     if (g==1 && a==5){
         if (h<105.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -643,7 +643,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>105 && h<110.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -666,7 +666,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>110 && h<115.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -686,7 +686,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>115 && h<121.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -706,7 +706,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>121 && h<125.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -726,7 +726,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>125 && h<132.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -746,7 +746,7 @@ function cal(){
     if (g==1 && a==5){
         if (h>132){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -766,7 +766,7 @@ function cal(){
     if (g==1 && a==6){
         if (h<115.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -786,7 +786,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>115 && h<120.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -806,7 +806,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>120 && h<125.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -826,7 +826,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>125 && h<129.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -846,7 +846,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>129 && h<137.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -866,7 +866,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>137 && h<143.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -886,7 +886,7 @@ function cal(){
     if (g==1 && a==6){
         if (h>143){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -906,7 +906,7 @@ function cal(){
     if (g==1 && a==7){
         if (h<126.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -926,7 +926,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>126 && h<128.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -946,7 +946,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>128 && h<133.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -966,7 +966,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>133 && h<140.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -986,7 +986,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>140 && h<145.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1006,7 +1006,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>145 && h<150.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1026,7 +1026,7 @@ function cal(){
     if (g==1 && a==7){
         if (h>150){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1046,7 +1046,7 @@ function cal(){
     if (g==1 && a==8){
         if (h<133.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1066,7 +1066,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>133 && h<136.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1086,7 +1086,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>136 && h<140.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1106,7 +1106,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>140 && h<145.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1126,7 +1126,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>145 && h<150.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1146,7 +1146,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>150 && h<154.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1166,7 +1166,7 @@ function cal(){
     if (g==1 && a==8){
         if (h>154){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1186,7 +1186,7 @@ function cal(){
     if (g==1 && a==9){
         if (h<138.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1206,7 +1206,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>138 && h<141.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1226,7 +1226,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>141 && h<147.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1246,7 +1246,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>147 && h<152.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1266,7 +1266,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>152 && h<157.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1286,7 +1286,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>157 && h<161.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1306,7 +1306,7 @@ function cal(){
     if (g==1 && a==9){
         if (h>161){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1326,7 +1326,7 @@ function cal(){
     if (g==1 && a==10){
         if (h<142.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1346,7 +1346,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>142 && h<146.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1366,7 +1366,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>146 && h<150.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1386,7 +1386,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>150 && h<156.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1406,7 +1406,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>156 && h<161.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1426,7 +1426,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>161 && h<165.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1446,7 +1446,7 @@ function cal(){
     if (g==1 && a==10){
         if (h>165){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1466,7 +1466,7 @@ function cal(){
     if (g==1 && a==11){
         if (h<145){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1486,7 +1486,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>145 && h<149.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1506,7 +1506,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>149 && h<155.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1526,7 +1526,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>155 && h<160.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1546,7 +1546,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>160 && h<165.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1566,7 +1566,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>165 && h<169.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1586,7 +1586,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>169){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1606,7 +1606,7 @@ function cal(){
     if (g==1 && a==12){
         if (h<148.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1626,7 +1626,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>148 && h<153.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1646,7 +1646,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>153 && h<157.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1666,7 +1666,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>157 && h<163.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1686,7 +1686,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>163 && h<167.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1706,7 +1706,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>167 && h<170.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1726,7 +1726,7 @@ function cal(){
     if (g==1 && a==12){
         if (h>170){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1746,7 +1746,7 @@ function cal(){
     if (g==1 && a==13){
         if (h<150.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1766,7 +1766,7 @@ function cal(){
     if (g==1 && a==13){
         if (h>150 && h<154.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1786,7 +1786,7 @@ function cal(){
     if (g==1 && a==13){
         if (h>154 && h<159.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1806,7 +1806,7 @@ function cal(){
     if (g==1 && a==13){
         if (h>159 && h<165.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1826,7 +1826,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>165 && h<170.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1846,7 +1846,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>170 && h<174.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1866,7 +1866,7 @@ function cal(){
     if (g==1 && a==11){
         if (h>174){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1886,7 +1886,7 @@ function cal(){
     if (g==2 && a==1){
         if (h<66.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1906,7 +1906,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>66 && h<69.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1926,7 +1926,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>69 && h<71.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1946,7 +1946,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>71 && h<74.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1966,7 +1966,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>74 && h<76.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -1986,7 +1986,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>76 && h<79.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2006,7 +2006,7 @@ function cal(){
     if (g==2 && a==1){
         if (h>79){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2026,7 +2026,7 @@ function cal(){
     if (g==2 && a==2){
         if (h<76.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2046,7 +2046,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>76 && h<80.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2066,7 +2066,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>80 && h<83.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2086,7 +2086,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>83 && h<86.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2106,7 +2106,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>86 && h<89.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2126,7 +2126,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>89 && h<93.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2145,7 +2145,7 @@ function cal(){
     if (g==2 && a==2){
         if (h>93){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2165,7 +2165,7 @@ function cal(){
     if (g==2 && a==3){
         if (h<84.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2185,7 +2185,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>84 && h<87.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2205,7 +2205,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>87 && h<91.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2225,7 +2225,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>91 && h<95.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2245,7 +2245,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>95 && h<99.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2265,7 +2265,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>99 && h<102.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2285,7 +2285,7 @@ function cal(){
     if (g==2 && a==3){
         if (h>102){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2305,7 +2305,7 @@ function cal(){
     if (g==2 && a==4){
         if (h<90.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2325,7 +2325,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>90 && h<94.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2345,7 +2345,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>94 && h<98.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2365,7 +2365,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>98 && h<103.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2385,7 +2385,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>103 && h<107.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2405,7 +2405,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>107 && h<111.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2425,7 +2425,7 @@ function cal(){
     if (g==2 && a==4){
         if (h>111){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2445,7 +2445,7 @@ function cal(){
     if (g==2 && a==5){
         if (h<105.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2465,7 +2465,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>105 && h<107.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2485,7 +2485,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>107 && h<110.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2505,7 +2505,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>110 && h<115.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2525,7 +2525,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>115 && h<117.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2545,7 +2545,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>117 && h<120.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2565,7 +2565,7 @@ function cal(){
     if (g==2 && a==5){
         if (h>120){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2586,7 +2586,7 @@ function cal(){
     if (g==2 && a==6){
         if (h<108.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2606,7 +2606,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>108 && h<115.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2626,7 +2626,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>115 && h<118.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2646,7 +2646,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>118 && h<123.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2666,7 +2666,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>123 && h<126.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2686,7 +2686,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>126 && h<130.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2706,7 +2706,7 @@ function cal(){
     if (g==2 && a==6){
         if (h>130){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2726,7 +2726,7 @@ function cal(){
     if (g==2 && a==7){
         if (h<117.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2746,7 +2746,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>117 && h<120.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2766,7 +2766,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>120 && h<124.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2786,7 +2786,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>124 && h<128.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2806,7 +2806,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>128 && h<132.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2826,7 +2826,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>132 && h<136.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2846,7 +2846,7 @@ function cal(){
     if (g==2 && a==7){
         if (h>136){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2867,7 +2867,7 @@ function cal(){
     if (g==2 && a==8){
         if (h<120.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2888,7 +2888,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>120 && h<123.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2908,7 +2908,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>123 && h<127.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2928,7 +2928,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>127 && h<130.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2948,7 +2948,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>130 && h<136.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2968,7 +2968,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>136 && h<139.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -2988,7 +2988,7 @@ function cal(){
     if (g==2 && a==8){
         if (h>139){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3008,7 +3008,7 @@ function cal(){
     if (g==2 && a==9){
         if (h<123.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3028,7 +3028,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>123 && h<126.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3049,7 +3049,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>126 && h<130.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3070,7 +3070,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>130 && h<134.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3090,7 +3090,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>134 && h<138.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3110,7 +3110,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>138 && h<142.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3130,7 +3130,7 @@ function cal(){
     if (g==2 && a==9){
         if (h>142){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3151,7 +3151,7 @@ function cal(){
     if (g==2 && a==10){
         if (h<125.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3172,7 +3172,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>125 && h<129.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3192,7 +3192,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>129 && h<133.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3212,7 +3212,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>133 && h<137.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3232,7 +3232,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>137 && h<141.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3252,7 +3252,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>141 && h<145.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3273,7 +3273,7 @@ function cal(){
     if (g==2 && a==10){
         if (h>145){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3293,7 +3293,7 @@ function cal(){
     if (g==2 && a==11){
         if (h<127.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3313,7 +3313,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>127 && h<132.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3333,7 +3333,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>132 && h<135.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3353,7 +3353,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>135 && h<140.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3373,7 +3373,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>140 && h<144.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3393,7 +3393,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>144 && h<148.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3413,7 +3413,7 @@ function cal(){
     if (g==2 && a==11){
         if (h>148){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3433,7 +3433,7 @@ function cal(){
     if (g==2 && a==12){
         if (h<131.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3453,7 +3453,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>131 && h<135.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3473,7 +3473,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>135 && h<139.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3493,7 +3493,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>139 && h<143.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3513,7 +3513,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>143 && h<147.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3533,7 +3533,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>147 && h<151.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3553,7 +3553,7 @@ function cal(){
     if (g==2 && a==12){
         if (h>151){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3573,7 +3573,7 @@ function cal(){
     if (g==2 && a==13){
         if (h<135.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile <5%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : <5%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3593,7 +3593,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>135 && h<139.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 10%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 10%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3613,7 +3613,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>139 && h<143.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 25%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 25%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3633,7 +3633,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>143 && h<148.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 50%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 50%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3653,7 +3653,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>148 && h<151.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 75%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 75%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3673,7 +3673,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>151 && h<155.1){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile 90%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : 90%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
@@ -3693,7 +3693,7 @@ function cal(){
     if (g==2 && a==13){
         if (h>155){
             document.getElementById("cmessage").style.display = "block";
-            document.getElementById("cmessage").innerHTML = "Hight centile >95%";
+            document.getElementById("cmessage").innerHTML = "Hight Percentile : >95%";
             document.getElementById("results").style.display = "block";
 
             //Systolic
