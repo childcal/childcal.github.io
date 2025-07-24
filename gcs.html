@@ -1,169 +1,256 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCS</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/gcs.css">
+    <title>Glasgow Coma Scale - Pediatric Calculations</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>GCS</h3>
-      </div>
-</div>
-
-<div id="fcontent" class="content">
-
-    <div class="top" id="eyeTop" onclick="eyeFun()">
-        <p>Eye Opening Response</p>
-        <div class="value">
-            <p id="eyeValue"></p>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>Glasgow Coma Scale</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="page" id="eyePage">
-        
-            <div class="control-group">
-          
-                <input type="radio"   id="eye1" onclick="fEye1()"/>
-                <label for="eye1">Spontaneously</label>
-          
-            <hr>
-                <input type="radio"   id="eye2" onclick="fEye2()"/>
-                <label for="eye2">To speech</label>
-          <hr>
+    </header>
 
-                <input type="radio"   id="eye3" onclick="fEye3()"/>
-                <label for="eye3">To pain</label>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Eye Opening Response -->
+                <div class="gcs-section">
+                    <div class="top" id="eyeTop" onclick="eyeFun()">
+                        <div class="section-header">
+                            <i class="fas fa-eye"></i>
+                            <span>Eye Opening Response</span>
+                        </div>
+                        <div class="value">
+                            <p id="eyeValue">Select</p>
+                        </div>
+                    </div>
+                    <div class="page" id="eyePage">
+                        <div class="control-group">
+                            <label for="eye1">
+                                <input type="radio" id="eye1" name="eye" onclick="fEye1()"/>
+                                <span>Spontaneously (4 points)</span>
+                            </label>
+                            
+                            <label for="eye2">
+                                <input type="radio" id="eye2" name="eye" onclick="fEye2()"/>
+                                <span>To speech (3 points)</span>
+                            </label>
+                            
+                            <label for="eye3">
+                                <input type="radio" id="eye3" name="eye" onclick="fEye3()"/>
+                                <span>To pain (2 points)</span>
+                            </label>
+                            
+                            <label for="eye4">
+                                <input type="radio" id="eye4" name="eye" onclick="fEye4()"/>
+                                <span>No response (1 point)</span>
+                            </label>
+                        </div>   
+                    </div>
+                </div>
 
-            <hr>
+                <!-- Verbal Response -->
+                <div class="gcs-section">
+                    <div class="top" id="verbalTop" onclick="verbalFun()">
+                        <div class="section-header">
+                            <i class="fas fa-comment"></i>
+                            <span>Verbal Response</span>
+                        </div>
+                        <div class="value">
+                            <p id="verbalValue">Select</p>
+                        </div>
+                    </div>
+                    <div class="page" id="verbalPage">
+                        <div class="control-group">
+                            <label for="verbal1">
+                                <input type="radio" id="verbal1" name="verbal" onclick="fVerbal1()"/>
+                                <span>Well oriented (5 points)</span>
+                            </label>
+                            
+                            <label for="verbal2">
+                                <input type="radio" id="verbal2" name="verbal" onclick="fVerbal2()"/>
+                                <span>Confused (4 points)</span>
+                            </label>
+                            
+                            <label for="verbal3">
+                                <input type="radio" id="verbal3" name="verbal" onclick="fVerbal3()"/>
+                                <span>Inappropriate words (3 points)</span>
+                            </label>
+                            
+                            <label for="verbal4">
+                                <input type="radio" id="verbal4" name="verbal" onclick="fVerbal4()"/>
+                                <span>Incomprehensible sounds (2 points)</span>
+                            </label>
+                            
+                            <label for="verbal5">
+                                <input type="radio" id="verbal5" name="verbal" onclick="fVerbal5()"/>
+                                <span>No response (1 point)</span>
+                            </label>
+                        </div>   
+                    </div>
+                </div>
 
-                <input type="radio"   id="eye4" onclick="fEye4()"/>
-                <label for="eye4">No response</label>  
-              
-              
-            </div>   
+                <!-- Motor Response -->
+                <div class="gcs-section">
+                    <div class="top" id="motorTop" onclick="motorFun()">
+                        <div class="section-header">
+                            <i class="fas fa-hand-paper"></i>
+                            <span>Motor Response</span>
+                        </div>
+                        <div class="value">
+                            <p id="motorValue">Select</p>
+                        </div>
+                    </div>
+                    <div class="page" id="motorPage">
+                        <div class="control-group">
+                            <label for="motor1">
+                                <input type="radio" id="motor1" name="motor" onclick="fMotor1()"/>
+                                <span>Obeys command (6 points)</span>
+                            </label>
+                            
+                            <label for="motor2">
+                                <input type="radio" id="motor2" name="motor" onclick="fMotor2()"/>
+                                <span>Moves to localized pain (5 points)</span>
+                            </label>
+                            
+                            <label for="motor3">
+                                <input type="radio" id="motor3" name="motor" onclick="fMotor3()"/>
+                                <span>Flex to withdraw from pain (4 points)</span>
+                            </label>
+                            
+                            <label for="motor4">
+                                <input type="radio" id="motor4" name="motor" onclick="fMotor4()"/>
+                                <span>Abnormal flexion (3 points)</span>
+                            </label>
+                            
+                            <label for="motor5">
+                                <input type="radio" id="motor5" name="motor" onclick="fMotor5()"/>
+                                <span>Abnormal extension (2 points)</span>
+                            </label>
+                            
+                            <label for="motor6">
+                                <input type="radio" id="motor6" name="motor" onclick="fMotor6()"/>
+                                <span>No response (1 point)</span>
+                            </label>
+                        </div>   
+                    </div>
+                </div>
 
-    </div>
-
-    <div class="top" id="verbalTop" onclick="verbalFun()">
-        <p>Verbal Response</p>
-        <div class="value">
-            <p id="verbalValue"></p>
+                <!-- GCS Total Score -->
+                <div class="gcsarea fade-in">
+                    <div class="gcs-total">
+                        <h3><i class="fas fa-brain"></i> Glasgow Coma Scale</h3>
+                        <div class="score-display">
+                            <span id="total">3</span>
+                            <span class="score-max">/15</span>
+                        </div>
+                        <div class="score-interpretation">
+                            <p id="interpretation">Select responses above to calculate GCS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="page" id="verbalPage">
-        
-            <div class="control-group">
-          
-                <input type="radio"   id="verbal1" onclick="fVerbal1()"/>
-                <label for="verbal1">Well oriented </label>
-          
-            <hr>
+    </main>
 
-                <input type="radio"   id="verbal2" onclick="fVerbal2()"/>
-                <label for="verbal2">Confused </label>
-          
-            <hr>
-
-                <input type="radio"   id="verbal3" onclick="fVerbal3()"/>
-                <label for="verbal3">Inappriate words </label>
-
-            <hr>
-
-
-                <input type="radio"   id="verbal4" onclick="fVerbal4()"/>
-                <label for="verbal4">Incomprehensible sounds</label>
-
-            <hr>
-
-                <input type="radio"   id="verbal5" onclick="fVerbal5()"/>
-                <label for="verbal5">No response</label>
-
-            </br>
-              
-              
-            </div>   
-
-    </div>
-
-    <div class="top" id="motorTop" onclick="motorFun()">
-        <p>Motor Response</p>
-        <div class="value">
-            <p id="motorValue"></p>
-        </div>
-    </div>
-    <div class="page" id="motorPage">
-        
-            <div class="control-group">
-          
-                <input type="radio"   id="motor1" onclick="fMotor1()"/>
-                <label for="motor1">Obeys command</label>
-          
-            <hr>
-
-                <input type="radio"   id="motor2" onclick="fMotor2()"/>
-                <label for="motor2">Moves to localized pain</label>
-          
-            <hr>
-
-                <input type="radio"   id="motor3" onclick="fMotor3()"/>
-                <label for="motor3">Flex to withdraw from pain</label>
-
-            <hr>
-
-                <input type="radio"   id="motor4" onclick="fMotor4()"/>
-                <label for="motor4">Abnormal flexion</label>
-
-            <hr>
-
-                <input type="radio"   id="motor5" onclick="fMotor5()"/>
-                <label for="motor5">Abnormal extension</label>
-
-            <hr>
-
-
-                <input type="radio"   id="motor6" onclick="fMotor6()"/>
-                <label for="motor6">No response</label>
-
-            </br>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
                 
-              
-            </div>   
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    </div>
-    <div class="gcsarea">
-    <div id="gcs" >
-        <h3><strong>GCS is-</strong></h3>
-        <h3 id="total"></h3><h3>/15</h3>
-    </div>
-    </div>
+    <script src="js/gcs.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
 
-    
-</div>
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
 
-</br>
-</br>
-</br>
+        // Add GCS interpretation function
+        function updateGCSInterpretation() {
+            const total = parseInt(document.getElementById('total').textContent) || 3;
+            const interpretation = document.getElementById('interpretation');
+            
+            if (total >= 13) {
+                interpretation.textContent = 'Mild brain injury';
+                interpretation.className = 'score-mild';
+            } else if (total >= 9) {
+                interpretation.textContent = 'Moderate brain injury';
+                interpretation.className = 'score-moderate';
+            } else {
+                interpretation.textContent = 'Severe brain injury';
+                interpretation.className = 'score-severe';
+            }
+        }
 
-
-
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/gcs.js"></script>
-<script src="js/main.js"></script>
+        // Override the total update to include interpretation
+        const originalTotal = document.getElementById('total');
+        if (originalTotal) {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                        updateGCSInterpretation();
+                    }
+                });
+            });
+            observer.observe(originalTotal, { childList: true, characterData: true, subtree: true });
+        }
+    </script>
 </body>
 </html>

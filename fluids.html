@@ -1,75 +1,405 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IV fluids calculation</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/fluid.css">
+    <title>IV Fluid Calculations - Pediatric Calculations</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>IV Fluid Calculations</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>IV fluid calculations</h3>
-      </div>
-</div>
 
-<div id="fcontent" class="content">
-    <div>
-        <p class="banner">Type</p>
-    </div>
-    <select id="type" class="selection" >   
-        <option value="0" class="hidden">Please Select</option>
-        <option value="1">IVF 2/3 of maintance</option>
-        <option value="2">IVF full maintance</option>
-        <option value="3">IVF full maintance + 5% deficit</option>
-        <option value="4">IVF full maintance + 7% deficit</option>
-        <option value="5">IVF full maintance + 10% deficit</option>
-    </select>
-    <div>
-        <p id="gmessage" class="worning"></p>
-    </div> 
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+
+                <!-- Calculation Form -->
+                <div class="calculation-form fade-in">
+                    <div class="form-group">
+                        <label for="type" class="form-label">
+                            <i class="fas fa-tint"></i>
+                            IV Fluid Type
+                        </label>
+                        <select id="type" class="form-control">   
+                            <option value="0">Please Select</option>
+                            <option value="1">IVF 2/3 of maintenance</option>
+                            <option value="2">IVF full maintenance</option>
+                            <option value="3">IVF full maintenance + 5% deficit</option>
+                            <option value="4">IVF full maintenance + 7% deficit</option>
+                            <option value="5">IVF full maintenance + 10% deficit</option>
+                        </select>
+                        <div id="gmessage" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wdata" class="form-label">
+                            <i class="fas fa-weight"></i>
+                            Weight (kg)
+                        </label>
+                        <input type="number" id="wdata" class="form-control" placeholder="Enter weight in kg" min="0" step="0.1">
+                        <div id="hmessage" class="error-message"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="calculate" onclick="ivFluid()">
+                            <i class="fas fa-calculator"></i>
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Display -->
+                <div class="results-section fade-in" id="results" style="display: none;">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <h3><i class="fas fa-tint"></i> IV Fluid Requirements</h3>
+                        </div>
+                        <div class="results-body">
+                            <div class="result-item">
+                                <div class="result-label">Flow Rate:</div>
+                                <div class="result-value">
+                                    <span id="cmessage">--</span> ml/hr
+                                </div>
+                            </div>
+                            <div class="result-note">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Solution:</strong> Normal Saline + 5% Dextrose (N/S + 5% dextrose)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/fluid.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Enhanced IV Fluid calculation function
+        function ivFluid() {
+            const typeSelect = document.getElementById("type");
+            const weightInput = document.getElementById("wdata");
+            const resultsSection = document.getElementById("results");
+            const resultMessage = document.getElementById("cmessage");
+            const typeError = document.getElementById("gmessage");
+            const weightError = document.getElementById("hmessage");
+            
+            // Clear previous errors
+            typeError.textContent = "";
+            weightError.textContent = "";
+            
+            const tp = typeSelect.value;
+            const wt = parseFloat(weightInput.value);
+            
+            // Validation
+            if (tp === "0") {
+                typeError.textContent = "Please select an IV fluid type";
+                typeError.style.display = "block";
+                return;
+            }
+            
+            if (!wt || wt <= 0) {
+                weightError.textContent = "Please enter a valid weight";
+                weightError.style.display = "block";
+                return;
+            }
+            
+            // Calculate maintenance fluids based on weight
+            let maintenance;
+            if (wt <= 10) {
+                maintenance = wt * 100 / 24; // 100 ml/kg/day for first 10kg
+            } else if (wt <= 20) {
+                maintenance = (1000 + (wt - 10) * 50) / 24; // 1000ml + 50ml/kg for next 10kg
+            } else {
+                maintenance = (1500 + (wt - 20) * 20) / 24; // 1500ml + 20ml/kg for remaining weight
+            }
+            
+            // Calculate deficit based on percentage
+            const deficit5 = wt * 50 / 24;  // 5% deficit
+            const deficit7 = wt * 70 / 24;  // 7% deficit
+            const deficit10 = wt * 100 / 24; // 10% deficit
+            
+            let result;
+            
+            switch(tp) {
+                case "1": // 2/3 maintenance
+                    result = maintenance * 2/3;
+                    break;
+                case "2": // Full maintenance
+                    result = maintenance;
+                    break;
+                case "3": // Full maintenance + 5% deficit
+                    result = maintenance + deficit5;
+                    break;
+                case "4": // Full maintenance + 7% deficit
+                    result = maintenance + deficit7;
+                    break;
+                case "5": // Full maintenance + 10% deficit
+                    result = maintenance + deficit10;
+                    break;
+                default:
+                    return;
+            }
+            
+            // Display result
+            resultMessage.textContent = result.toFixed(2);
+            resultsSection.style.display = "block";
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
+
+        // Clear errors when user starts typing/selecting
+        document.getElementById('type').addEventListener('change', function() {
+            document.getElementById('gmessage').style.display = 'none';
+        });
+        
+        document.getElementById('wdata').addEventListener('input', function() {
+            document.getElementById('hmessage').style.display = 'none';
+        });
+    </script>
     
-    <p class="banner">Weight (Kg)</p>
-    <input type="number" id="wdata" class="selection" placeholder="">
-    
-    <div>
-    <p id="hmessage" class="worning"></p>
-    </div>
-    
-    <button class="qbtn" id="calculate" onclick="ivFluid()">Calculate</button>
-    </br>
-    <div class="area flex">
-    <h4> IVF </h4>
-    <div class="flex" id="display">
-    <h4 id="cmessage"></h4>
-    <h4>ml/hr</h4>
-    </div>
-    <h4>(N/S + 5% dextrose)</h4>
-    </div>
-</div>
-
-</br>
-</br>
-</br>
-
-
-
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/fluid.js"></script>
-<script src="js/main.js"></script>
+    <style>
+        /* Additional styles for fluid calculator */
+        .calculation-form {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-light);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .error-message {
+            color: var(--danger-color);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .results-section {
+            margin-top: 2rem;
+        }
+        
+        .results-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+        
+        .results-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .results-header h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .results-body {
+            padding: 2rem;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .result-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .result-note {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .result-note i {
+            color: var(--primary-color);
+            margin-top: 0.1rem;
+        }
+        
+        .nav-link.active {
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color);
+        }
+        
+        /* CSS Variables - add if not already defined */
+        :root {
+            --primary-color: #3498db;
+            --primary-dark: #2980b9;
+            --danger-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --border-color: #ddd;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --border-radius-sm: 4px;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow: 0 4px 20px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .calculation-form {
+                padding: 1.5rem;
+            }
+            
+            .results-body {
+                padding: 1.5rem;
+            }
+            
+            .result-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </body>
 </html>

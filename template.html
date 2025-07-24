@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Centiles - Pediatric Calculations</title>
+    <title>[PAGE_TITLE] - Pediatric Calculations</title>
     <link href="fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="header-title">
-                    <h1>BMI Percentiles</h1>
+                    <h1>[PAGE_TITLE]</h1>
                 </div>
                 <div class="header-actions">
                     <div class="bar-imgx">
@@ -29,83 +29,51 @@
         </div>
     </header>
 
+    
+
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
             <div class="content-wrapper">
-                <!-- Input Form -->
+                <!-- Page specific content goes here -->
+                
+                <!-- Example Input Form Section -->
                 <div class="form-section">
-                    <!-- Gender Selection -->
+                    <!-- Example input field -->
                     <div class="form-group">
                         <p class="banner">
-                            <i class="fas fa-venus-mars input-icon"></i>
-                            Gender
+                            <i class="fas fa-[ICON] input-icon"></i>
+                            [FIELD_LABEL]
                         </p>
-                        <select id="gender" class="selection">   
+                        <input type="[INPUT_TYPE]" id="[FIELD_ID]" class="selection" placeholder="[PLACEHOLDER]">
+                        <p id="[FIELD_ID]message" class="worning"></p>
+                    </div>
+
+                    <!-- Example select field -->
+                    <div class="form-group">
+                        <p class="banner">
+                            <i class="fas fa-[ICON] input-icon"></i>
+                            [SELECT_LABEL]
+                        </p>
+                        <select id="[SELECT_ID]" class="selection">   
                             <option value="0" class="hidden">Please Select</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
+                            <option value="1">[OPTION_1]</option>
+                            <option value="2">[OPTION_2]</option>
                         </select>
-                        <p id="gmessage" class="worning"></p>
-                    </div>
-
-                    <!-- Age Selection -->
-                    <div class="form-group">
-                        <p class="banner">
-                            <i class="fas fa-birthday-cake input-icon"></i>
-                            Age
-                        </p>
-                        <select id="age" class="selection">   
-                            <option value="0" class="hidden">Please Select</option>
-                            <option value="2">02 years</option>
-                            <option value="3">03 years</option>
-                            <option value="4">04 years</option>
-                            <option value="5">05 years</option>
-                            <option value="6">06 years</option>
-                            <option value="7">07 years</option>
-                            <option value="8">08 years</option>
-                            <option value="9">09 years</option>
-                            <option value="10">10 years</option>
-                            <option value="11">11 years</option>
-                            <option value="12">12 years</option>
-                            <option value="13">13 years</option>
-                            <option value="14">14 years</option>
-                        </select>
-                        <p id="agemessage" class="worning"></p>
-                    </div>
-
-                    <!-- Height Input -->
-                    <div class="form-group">
-                        <p class="banner">
-                            <i class="fas fa-ruler-vertical input-icon"></i>
-                            Height (cm)
-                        </p>
-                        <input type="number" id="hdata" class="selection" placeholder="Enter height in centimeters">
-                        <p id="hmessage" class="worning"></p>
-                    </div>
-
-                    <!-- Weight Input -->
-                    <div class="form-group">
-                        <p class="banner">
-                            <i class="fas fa-weight-hanging input-icon"></i>
-                            Weight (kg)
-                        </p>
-                        <input type="number" id="wdata" class="selection" placeholder="Enter weight in kilograms">
-                        <p id="wmessage" class="worning"></p>
+                        <p id="[SELECT_ID]message" class="worning"></p>
                     </div>
 
                     <!-- Calculate Button -->
-                    <button class="qbtn" id="calculate" onclick="calbmi()">
+                    <button class="qbtn" id="calculate" onclick="[CALCULATION_FUNCTION]()">
                         <i class="fas fa-calculator"></i>
-                        Calculate BMI Percentiles
+                        Calculate [RESULT_TYPE]
                     </button>
                 </div>
 
                 <!-- Results Area -->
                 <div class="area fade-in">
-                    <h4 id="bmimsg"></h4>
                     <h4 id="cmessage"></h4>
-                    <h4 id="target"></h4>
+                    <!-- Additional result elements can go here -->
                 </div>
             </div>
         </div>
@@ -116,7 +84,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    
+                    <div class="footer-brand">
+                        <div class="brand-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span class="brand-text">Pediatric Calculations - SL</span>
+                    </div>
                     <p class="footer-description">
                         <i class="fas fa-shield-alt"></i>
                         Free pediatric calculation tools for healthcare professionals in Sri Lanka
@@ -141,8 +114,25 @@
         </div>
     </footer>
 
-    <script src="js/bmi.js"></script>
+    <!-- Include page-specific JavaScript -->
+    <script src="js/[PAGE_SCRIPT].js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
 
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

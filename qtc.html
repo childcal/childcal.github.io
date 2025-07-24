@@ -1,57 +1,128 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QTC In ECG</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/qtc.css">
+    <title>QTC Calculation - Pediatric Calculations</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>QTC in ECG</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>QTC In ECG</h3>
-      </div>
-</div>
-
-<div id="fcontent" class="content">
-    <img src="img/qtc.jpg" alt="">
     
-<p class="banner">QT Intervel (small squres)</p>
-<input type="number" id="qt" class="selection" placeholder="">
-</br>
-</br>
-<p class="banner">RR Interval (small squres)</p>
-<input type="number" id="rr" class="selection" placeholder="">
-</br>
-</br>
-<button class="qbtn" id="calculate" onclick="qtc()">Calculate</button>
 
-</br>
-<h3 id="qtcresult"></h3>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- ECG Reference Image -->
+                <div class="text-center mb-4">
+                    <img src="img/qtc.jpg" alt="QTC Measurement Reference" style="max-width: 100%; height: auto; border-radius: var(--border-radius); box-shadow: var(--card-shadow);">
+                </div>
 
+                <!-- Input Form -->
+                <div class="form-section">
+                    <!-- QT Interval Input -->
+                    <div class="form-group">
+                        <p class="banner">
+                            <i class="fas fa-chart-line input-icon"></i>
+                            QT Interval (small squares)
+                        </p>
+                        <input type="number" id="qt" class="selection" placeholder="Enter QT interval in small squares">
+                    </div>
 
-</div>
-</br></br></br></br></br>
+                    <!-- RR Interval Input -->
+                    <div class="form-group">
+                        <p class="banner">
+                            <i class="fas fa-wave-square input-icon"></i>
+                            RR Interval (small squares)
+                        </p>
+                        <input type="number" id="rr" class="selection" placeholder="Enter RR interval in small squares">
+                    </div>
 
+                    <!-- Calculate Button -->
+                    <button class="qbtn" id="calculate" onclick="qtc()">
+                        <i class="fas fa-calculator"></i>
+                        Calculate QTC
+                    </button>
+                </div>
 
+                <!-- Results Area -->
+                <div class="area fade-in">
+                    <h3 id="qtcresult"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/qtc.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/qtc.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

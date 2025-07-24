@@ -1,46 +1,252 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideal Body Weight</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Connection Error - Pediatric Calculations</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>Connection Error</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>Error</h3>
-      </div>
-</div>
+    <!-- Navigation -->
+    <nav class="main-navbar" id="mainNavbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <span class="brand-text">Pediatric Calculations - SL</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bp.html" class="nav-link">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Blood Pressure</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bmi.html" class="nav-link">
+                            <i class="fas fa-weight"></i>
+                            <span>BMI Centiles</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ideal.html" class="nav-link">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Ideal Weight</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="qtc.html" class="nav-link">
+                            <i class="fas fa-heart"></i>
+                            <span>QTC Calculation</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="wetflag.html" class="nav-link">
+                            <i class="fas fa-ambulance"></i>
+                            <span>WETFLAG Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gcs.html" class="nav-link">
+                            <i class="fas fa-brain"></i>
+                            <span>Glasgow Coma Scale</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fluids.html" class="nav-link">
+                            <i class="fas fa-tint"></i>
+                            <span>IV Fluids</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div id="fcontent" class="content">
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="error-container text-center">
+                    <div class="error-icon">
+                        <i class="fas fa-wifi-slash"></i>
+                    </div>
+                    
+                    <div class="error-content">
+                        <h2>Connection Required</h2>
+                        <p class="error-message">
+                            Please enable your WiFi or mobile data connection to access this feature.
+                        </p>
+                        
+                        <div class="error-actions">
+                            <button onclick="location.reload()" class="qbtn retry-btn">
+                                <i class="fas fa-redo-alt"></i>
+                                Try Again
+                            </button>
+                            
+                            <a href="index.html" class="qbtn home-btn">
+                                <i class="fas fa-home"></i>
+                                Go to Home
+                            </a>
+                        </div>
+                        
+                        <div class="offline-info">
+                            <p><strong>Offline Tools Available:</strong></p>
+                            <div class="offline-tools">
+                                <a href="bp.html" class="tool-link">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Blood Pressure</span>
+                                </a>
+                                <a href="bmi.html" class="tool-link">
+                                    <i class="fas fa-weight"></i>
+                                    <span>BMI Centiles</span>
+                                </a>
+                                <a href="ideal.html" class="tool-link">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <span>Ideal Weight</span>
+                                </a>
+                                <a href="qtc.html" class="tool-link">
+                                    <i class="fas fa-heart"></i>
+                                    <span>QTC Calculation</span>
+                                </a>
+                                <a href="wetflag.html" class="tool-link">
+                                    <i class="fas fa-ambulance"></i>
+                                    <span>WETFLAG</span>
+                                </a>
+                                <a href="gcs.html" class="tool-link">
+                                    <i class="fas fa-brain"></i>
+                                    <span>GCS</span>
+                                </a>
+                                <a href="fluids.html" class="tool-link">
+                                    <i class="fas fa-tint"></i>
+                                    <span>IV Fluids</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    <div class="banner">
-        <h2 style="text-align: center;">Please enable your wifi/ mobile data for access</h2>
-    </div>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        <div class="brand-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span class="brand-text">Pediatric Calculations - SL</span>
+                    </div>
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p>
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Medical Disclaimer:</strong> These tools are for educational purposes and clinical reference only. 
+                        Always verify calculations and consult current clinical guidelines for patient care decisions.
+                    </p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-</div>
+    <script src="js/main.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
 
-</br>
-</br>
-</br>
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
 
+        // Auto-retry connection every 30 seconds
+        let retryInterval = setInterval(function() {
+            if (navigator.onLine) {
+                clearInterval(retryInterval);
+                // Show success message and redirect
+                const errorMessage = document.querySelector('.error-message');
+                errorMessage.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success-color);"></i> Connection restored! Redirecting...';
+                setTimeout(function() {
+                    window.history.back();
+                }, 2000);
+            }
+        }, 30000);
 
+        // Check connection status
+        window.addEventListener('online', function() {
+            const errorMessage = document.querySelector('.error-message');
+            errorMessage.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success-color);"></i> Connection restored! You can now try again.';
+            
+            // Enable retry button
+            const retryBtn = document.querySelector('.retry-btn');
+            retryBtn.style.background = 'linear-gradient(135deg, var(--success-color), #1e7e34)';
+        });
 
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-
+        window.addEventListener('offline', function() {
+            const errorMessage = document.querySelector('.error-message');
+            errorMessage.innerHTML = 'Please enable your WiFi or mobile data connection to access this feature.';
+        });
+    </script>
 </body>
 </html>

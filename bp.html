@@ -1,134 +1,526 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BP Centile</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bp.css">
+    <title>BP Percentiles</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+       :root {
+    --primary-color: #3bd4b8;
+    --secondary-color: #1e3a5f;
+    --accent-color: #54d2c5;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --text-muted: #999999;
+    --border-color: #e0e0e0;
+    --card-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    --card-hover-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    --border-radius: 12px;
+    --border-radius-sm: 6px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: none;
+            box-shadow: var(--card-shadow);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-img {
+            padding: 0 1rem;
+        }
+
+        .top-img a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .top-img a:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+        .top-data {
+            flex: 1;
+            padding-left: 1rem;
+        }
+
+        .top-data h3 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Content Styles */
+        .content {
+            margin-top: 80px;
+            padding: 2rem 0;
+            min-height: calc(100vh - 80px);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .calc-section {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .banner {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .selection {
+            width: 100%;
+            height: 45px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 0 1rem;
+            font-size: 1rem;
+            background: white;
+            transition: var(--transition);
+            color: #495057;
+        }
+
+        .selection:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .selection:hover {
+            border-color: var(--accent-color);
+        }
+
+        .hidden {
+            color: #6c757d;
+        }
+
+        .worning {
+            color: var(--danger-color);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .qbtn {
+            background: linear-gradient(135deg, var(--success-color), #20c997);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            width: 100%;
+        }
+
+        .qbtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .qbtn:active {
+            transform: translateY(0);
+        }
+
+        .area {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        #cmessage {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Results Section */
+        #results {
+            display: none;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            background: white;
+        }
+
+        th {
+            background-color: #495057;
+            color: white;
+            padding: 1rem 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            font-size: 1rem;
+        }
+
+        th:first-child {
+            border-top-left-radius: var(--border-radius);
+        }
+
+        th:last-child {
+            border-top-right-radius: var(--border-radius);
+        }
+
+        td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            font-weight: 500;
+        }
+
+        /* Row-specific background colors */
+        .percentile-50 {
+            background-color: #d4edda !important; /* Light green */
+        }
+
+        .percentile-90 {
+            background-color: #fff3cd !important; /* Light yellow */
+        }
+
+        .percentile-95 {
+            background-color: #ffeaa7 !important; /* Light orange */
+        }
+
+        .percentile-99 {
+            background-color: #f8d7da !important; /* Light red */
+        }
+
+        /* Color Classes */
+        .red {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .brown {
+            color: #d2691e;
+            font-weight: bold;
+        }
+
+        .orange {
+            color: #fd7e14;
+            font-weight: bold;
+        }
+
+        .green {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .about a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Form Icons */
+        .input-icon {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .calc-section {
+                padding: 1.5rem;
+                margin: 0 0.5rem 1.5rem;
+            }
+            
+            .area {
+                padding: 1.5rem;
+                margin: 1.5rem 0.5rem 0;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            th, td {
+                padding: 0.5rem 0.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-data h3 {
+                font-size: 1.25rem;
+            }
+            
+            .calc-section {
+                padding: 1rem;
+            }
+            
+            .area {
+                padding: 1rem;
+            }
+
+            table {
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Accessibility */
+        .selection:focus,
+        .qbtn:focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .bar-imgx{
+            width: 45px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>BP Percentiles</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>BP Centiles</h3>
-      </div>
-</div>
+    <!-- Main Content -->
+    <div id="fcontent" class="content">
+        <div class="container">
+            <div class="calc-section fade-in">
+                <!-- Gender Selection -->
+                <div class="form-group">
+                    <p class="banner">
+                        <i class="fas fa-venus-mars input-icon"></i>
+                        Gender
+                    </p>
+                    <select id="gender" class="selection">   
+                        <option value="0" class="hidden">Please Select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                    <p id="gmessage" class="worning"></p>
+                </div>
 
-<div id="fcontent" class="content">
-  <div>
-    <p class="banner">Gender</p>
-</div>
-<select id="gender" class="selection" >   
-    <option value="0" class="hidden">Please Select</option>
-    <option value="1">Male</option>
-    <option value="2">Female</option>
-</select>
-<div>
-    <p id="gmessage" class="worning"></p>
-</div> 
-<div>
-<p class="banner">Age</p>
-</div> 
-<select id="age" class="selection" >   
-<option value="0" class="hidden">Please Select</option>
-<option value="1">01 year</option>
-<option value="2">02 year</option>
-<option value="2">02 year</option>
-<option value="3">03 year</option>
-<option value="4">04 year</option>
-<option value="5">05 year</option>
-<option value="6">06 year</option>
-<option value="7">07 year</option>
-<option value="8">08 year</option>
-<option value="9">09 year</option>
-<option value="10">10 year</option>
-<option value="11">11 year</option>
-<option value="12">12 year</option>
-<option value="13">13 year</option>
-</select>
-<div>
-<p id="agemessage" class="worning"></p>
-</div> 
-<div>
-<p class="banner">Height (cm)</p>
-</div>
-<input type="number" id="hdata" class="selection" placeholder="">
+                <!-- Age Selection -->
+                <div class="form-group">
+                    <p class="banner">
+                        <i class="fas fa-birthday-cake input-icon"></i>
+                        Age
+                    </p>
+                    <select id="age" class="selection">   
+                        <option value="0" class="hidden">Please Select</option>
+                        <option value="1">01 year</option>
+                        <option value="2">02 year</option>
+                        <option value="3">03 year</option>
+                        <option value="4">04 year</option>
+                        <option value="5">05 year</option>
+                        <option value="6">06 year</option>
+                        <option value="7">07 year</option>
+                        <option value="8">08 year</option>
+                        <option value="9">09 year</option>
+                        <option value="10">10 year</option>
+                        <option value="11">11 year</option>
+                        <option value="12">12 year</option>
+                        <option value="13">13 year</option>
+                    </select>
+                    <p id="agemessage" class="worning"></p>
+                </div>
 
+                <!-- Height Input -->
+                <div class="form-group">
+                    <p class="banner">
+                        <i class="fas fa-ruler-vertical input-icon"></i>
+                        Height (cm)
+                    </p>
+                    <input type="number" id="hdata" class="selection" placeholder="Enter height in centimeters">
+                    <p id="hmessage" class="worning"></p>
+                </div>
 
-<div>
-<p id="hmessage" class="worning"></p>
-</div>
+                <!-- Calculate Button -->
+                <button class="qbtn" id="calculate" onclick="cal()">
+                    <i class="fas fa-calculator me-2"></i>
+                    Calculate BP Percentiles
+                </button>
+            </div>
 
-<button class="qbtn" id="calculate" onclick="cal()">Calculate</button>
-</br>
-<div class="area">
-<h4 id="cmessage" style="text-align: center;"></h4>
-</br>
+            <!-- Results Area -->
+            <div class="area fade-in">
+                <h4 id="cmessage"></h4>
+                
+                <div id="results">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>BP Percentiles</th>
+                                <th>Systolic</th>
+                                <th>Diastolic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="percentile-50">
+                                <td class="green">50th</td>
+                                <td id="s50" class="green"></td>
+                                <td id="d50" class="green"></td>
+                            </tr>
+                            <tr class="percentile-90">
+                                <td class="orange">90th</td>
+                                <td id="s90" class="orange"></td>
+                                <td id="d90" class="orange"></td>
+                            </tr>
+                            <tr class="percentile-95">
+                                <td class="brown">95th</td>
+                                <td id="s95" class="brown"></td>
+                                <td id="d95" class="brown"></td>  
+                            </tr>
+                            <tr class="percentile-99">
+                                <td class="red">99th</td>
+                                <td id="s99" class="red"></td>
+                                <td id="d99" class="red"></td>  
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="about">
+                <a href="about.html">
+                    <i class="fas fa-info-circle"></i>
+                    About Us
+                </a>
+            </div>
+        </div>
+    </div>
 
-<div id="results">
-<table class="table">
-    <tr>
-        <th style="border-radius: 6px 0 0 0;">BP Centiles</th>
-        <th >Systoic</th>
-        <th style="border-radius: 0 6px 0 0;">Diastolic</th>
-    </tr>
-    <tr>
-        <td class="green">50th</td>
-        <td id="s50" class="green"></td>
-        <td id="d50" class="green"></td>
-   </tr>
-   <tr>
-        <td class="orange">90th</td>
-        <td id="s90" class="orange"></td>
-        <td id="d90" class="orange"></td>
-   </tr>
-      <tr>
-        <td class="brown">95th</td>
-        <td id="s95" class="brown"></td>
-        <td id="d95" class="brown"></td>  
-   </tr>
-</tr>
-        <tr>
-        <td class="red">99th</td>
-        <td id="s99" class="red"></td>
-        <td id="d99" class="red"></td>  
-    </tr>
-</table>
-</div>
+    <!-- Scripts -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 
-
-
-</div>
-</div>
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</div>
-
-
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/script.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>

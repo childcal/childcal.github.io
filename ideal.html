@@ -1,66 +1,139 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideal Body Weight</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Ideal Body Weight - Pediatric Calculations</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>Ideal Body Weight</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header" id="myHeader">
-    <div class="top-img">
-        <a href="index.html">
-        <img src="img/back.svg" alt="">
-        </a>
-      </div>
-      <div class="top-data">
-       <h3>Ideal Body Weight</h3>
-      </div>
-</div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Input Form -->
+                <div class="form-section">
+                    <!-- Gender Selection -->
+                    <div class="form-group">
+                        <p class="banner">
+                            <i class="fas fa-venus-mars input-icon"></i>
+                            Gender
+                        </p>
+                        <select id="gender" class="selection">   
+                            <option value="0" class="hidden">Please Select</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                        <p id="gmessage" class="worning"></p>
+                    </div>
 
-<div id="fcontent" class="content">
-    <div>
-        <p class="banner">Gender</p>
-    </div>
-    <select id="gender" class="selection" >   
-        <option value="0" class="hidden">Please Select</option>
-        <option value="1">Male</option>
-        <option value="2">Female</option>
-    </select>
-    <div>
-        <p id="gmessage" class="worning"></p>
-    </div> 
-    
-    <p class="banner">Height (cm)</p>
-    <input type="number" id="hdata" class="selection" placeholder="">
-    
-    <div>
-    <p id="hmessage" class="worning"></p>
-    </div>
-    
-    <button class="qbtn" id="calculate" onclick="ideal()">Calculate</button>
-    </br>
-    <div class="area">
-    <h4 id="cmessage"></h4>
-    </div>
-</div>
+                    <!-- Height Input -->
+                    <div class="form-group">
+                        <p class="banner">
+                            <i class="fas fa-ruler-vertical input-icon"></i>
+                            Height (cm)
+                        </p>
+                        <input type="number" id="hdata" class="selection" placeholder="Enter height in centimeters">
+                        <p id="hmessage" class="worning"></p>
+                    </div>
 
-</br>
-</br>
-</br>
+                    <!-- Calculate Button -->
+                    <button class="qbtn" id="calculate" onclick="ideal()">
+                        <i class="fas fa-calculator"></i>
+                        Calculate Ideal Body Weight
+                    </button>
+                </div>
 
+                <!-- Results Area -->
+                <div class="area fade-in">
+                    <div class="weight-result">
+                        <div class="result-header">
+                            <h4><i class="fas fa-balance-scale"></i> Ideal Body Weight</h4>
+                        </div>
+                        <div class="result-display">
+                            <div class="result-value">
+                                <span id="cmessage" class="result-number"></span>
+                            </div>
+                            <div class="result-info">
+                                <p><small>Used for medication dosing calculations in pediatric patients</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<div class="footer">
-<div class="donate">
-<a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
-</div>
-<div class="about">
-<a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/ideal.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/ideal.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('mainNavbar');
+            navbar.classList.toggle('show');
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('mainNavbar');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

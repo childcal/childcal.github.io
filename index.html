@@ -1,140 +1,195 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pediactric Calculations</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <title>Pediatric Calculations - Professional Medical Tools</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<div class="header" id="myHeader">
-    <div class="top-img">
-      <img src="img/home.svg" alt="">
-    </div>
-    <div class="top-data">
-     <h3>Pediactric Calculations</h3>
-    </div>
-</div>
-
-<div id="fcontent" class="content">
-</br>
-
-<a href="bp.html">
-<div class="bar">
-    <div class="bar-img">
-      <img src="img/bp.svg" alt="">
-    </div>
-    <div class="bar-data">
-        <h4>BP Centiles</h4>
-    </div>
-</div>
-</a>
-
-<a href="bmi.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/bmi.svg" alt="">
-  </div>
-  <div class="bar-data">
-      <h4>BMI Centiles </h4>
-  </div>
-</div>
-</a>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="back-button" >
+                    <a href="#" class="back-link">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>Pediatric Calculations - SL</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="bar-imgx">
+                        <img src="img/pediatrics.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                
 
-<a href="ideal.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/ideal.svg" alt="">
-  </div>
-  <div class="bar-data">
-      <h4>Ideal Body weight</h4>
-  </div>
-</div>
-</a>
+                <!-- Calculation Tools Grid -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="bp.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon bp">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>Blood Pressure Percentiles</h5>
+                                    <p>Calculate pediatric BP percentiles by age, gender, and height</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="bmi.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon bmi">
+                                    <i class="fas fa-weight"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>BMI Percentiles</h5>
+                                    <p>Body Mass Index percentiles for pediatric patients</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-<a href="qtc.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/qtc.svg" alt="">
-  </div>
-  <div class="bar-data">
-      <h4>QTC in ECG</h4>
-  </div>
-</div>
-</a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="ideal.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon weight">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>Ideal Body Weight</h5>
+                                    <p>Calculate ideal body weight for pediatric dosing</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-<a href="wetflag.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/cpr.png" alt="">
-  </div>
-  <div class="bar-data">
-      <p><b>WETFLAG</b></p>
-      <p><i>For pediatric emergencies</i></p>
-  </div>
-</div>
-</a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="qtc.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon qtc">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>QTC Calculation</h5>
+                                    <p>Corrected QT interval calculation for ECG interpretation</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-<a href="gcs.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/gcs.png" alt="">
-  </div>
-  <div class="bar-data">
-    <p><b>GCS</b></p>
-    <p><i>Glasgow Coma Scale</i></p>
-  </div>
-</div>
-</a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="wetflag.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon emergency">
+                                    <i class="fas fa-ambulance"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>WETFLAG Emergency</h5>
+                                    <p>Pediatric emergency calculations and drug dosing</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-<a href="fluids.html">
-<div class="bar">
-  <div class="bar-img">
-    <img src="img/fluid.svg" alt="">
-  </div>
-  <div class="bar-data">
-      <h4>IV fluid calculations<h4>
-  </div>
-</div>
-</a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="gcs.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon gcs">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>Glasgow Coma Scale</h5>
+                                    <p>Pediatric and adult GCS assessment tool</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-<a href="https://childcal.github.io">
-  <div class="bar">
-    <div class="bar-img">
-      <img src="img/more.svg" alt="">
-    </div>
-    <div class="bar-data">
-        <p style="color: rgb(173, 53, 53);" >More calculations<p>
-          <P><i>Please enable wifi/mobile data</i></P>
-    </div>
-  </div>
-  </a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="fluids.html" class="calc-card d-block fade-in">
+                            <div class="calc-card-body">
+                                <div class="calc-icon fluid">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>IV Fluid Calculations</h5>
+                                    <p>Maintenance fluid requirements and replacement therapy</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://childcal.github.io" class="calc-card d-block fade-in" target="_blank" rel="noopener">
+                            <div class="calc-card-body">
+                                <div class="calc-icon more">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <div class="calc-content">
+                                    <h5>More Calculations</h5>
+                                    <p>Additional pediatric calculation tools online</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi me-1"></i>Internet connection required
+                                    </small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<br>
-<br>
-<br>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        
+                    </div>
+                    <p class="footer-description">
+                        <i class="fas fa-shield-alt"></i>
+                        Free pediatric calculation tools for healthcare professionals in Sri Lanka
+                    </p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Pediatric Calculations - SL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="js/main.js"></script>
 
-
-
-</div>
-
-
-<div class="footer">
- <div class="donate">
-  <a href="https://www.buymeacoffee.com/unitunity"><p>Donate</p></a>
- </div>
- <div class="about">
-  <a href="about.html"><p>About Us</p></a>
-</div>
-</div>
-<script src="js/script.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
