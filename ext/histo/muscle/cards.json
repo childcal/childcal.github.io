@@ -1,0 +1,70 @@
+{
+    "title": "Flashcard Quiz",
+    "cards": [
+        {
+            "id": 1,
+            "question": "img/1-Q.png",
+            "answer": "img/1-A.png"
+        },
+        {
+            "id": 2,
+            "question": "img/2-Q.png",
+            "answer": "img/2-A.png"
+        },
+        {
+            "id": 3,
+            "question": "img/3-Q.png",
+            "answer": "img/3-A.png"
+        },
+        {
+            "id": 4,
+            "question": "img/4-Q.png",
+            "answer": "img/4-A.png"
+        },
+        {
+            "id": 5,
+            "question": "img/5-Q.png",
+            "answer": "img/5-A.png"
+        },
+        {
+            "id": 6,
+            "question": "img/6-Q.png",
+            "answer": "img/6-A.png"
+        },
+        {
+            "id": 7,
+            "question": "img/7-Q.png",
+            "answer": "img/7-A.png"
+        },
+        {
+            "id": 8,
+            "question": "img/8-Q.png",
+            "answer": "img/8-A.png"
+        },
+        {
+            "id": 9,
+            "question": "img/9-Q.png",
+            "answer": "img/9-A.png"
+        },
+        {
+            "id": 10,
+            "question": "img/10-Q.png",
+            "answer": "img/10-A.png"
+        },
+        {
+            "id": 11,
+            "question": "img/11-Q.png",
+            "answer": "img/11-A.png"
+        },
+        {
+            "id": 12,
+            "question": "img/12-Q.png",
+            "answer": "img/12-A.png"
+        },
+        {
+            "id": 13,
+            "question": "img/13-Q.png",
+            "answer": "img/13-A.png"
+        }
+    ]
+}

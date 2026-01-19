@@ -2,14 +2,13 @@
 (function() {
     'use strict';
 
-    // Configuration
-    const TOTAL_CARDS = 9;
-
     // State
+    let cards = [];
+    let totalCards = 0;
     let currentIndex = 0;
-    let cardOrder = Array.from({ length: TOTAL_CARDS }, (_, i) => i + 1);
+    let cardOrder = [];
     let isFlipped = false;
-    let answers = {}; // Track answers: { cardIndex: true/false }
+    let answers = {};
     let currentCardAnswered = false;
 
     // DOM Elements
@@ -32,6 +31,29 @@
     const incorrectCount = document.getElementById('incorrectCount');
     const progressRing = document.getElementById('progressRing');
 
+    // Load cards from JSON
+    async function loadCards() {
+        try {
+            const response = await fetch('cards.json');
+            const data = await response.json();
+
+            // Set title if provided
+            if (data.title) {
+                document.querySelector('h1').textContent = data.title;
+                document.title = data.title;
+            }
+
+            cards = data.cards;
+            totalCards = cards.length;
+            cardOrder = Array.from({ length: totalCards }, (_, i) => i);
+
+            init();
+        } catch (error) {
+            console.error('Error loading cards:', error);
+            alert('Error loading flashcards. Please check that cards.json exists.');
+        }
+    }
+
     // Initialize the application
     function init() {
         createIndicators();
@@ -44,7 +66,7 @@
     // Create card indicator dots
     function createIndicators() {
         cardIndicators.innerHTML = '';
-        for (let i = 0; i < TOTAL_CARDS; i++) {
+        for (let i = 0; i < totalCards; i++) {
             const dot = document.createElement('div');
             dot.className = 'indicator';
             dot.dataset.index = i;
@@ -72,7 +94,7 @@
 
     // Update the current card images
     function updateCard() {
-        const cardNumber = cardOrder[currentIndex];
+        const cardData = cards[cardOrder[currentIndex]];
 
         // Get card face elements
         const frontFace = document.querySelector('.flashcard-front');
@@ -89,19 +111,19 @@
         const aImg = new Image();
 
         qImg.onload = () => {
-            questionImg.src = `img/${cardNumber}-Q.png`;
+            questionImg.src = cardData.question;
             questionImg.classList.remove('loading');
             frontFace.classList.remove('is-loading');
         };
 
         aImg.onload = () => {
-            answerImg.src = `img/${cardNumber}-A.png`;
+            answerImg.src = cardData.answer;
             answerImg.classList.remove('loading');
             backFace.classList.remove('is-loading');
         };
 
-        qImg.src = `img/${cardNumber}-Q.png`;
-        aImg.src = `img/${cardNumber}-A.png`;
+        qImg.src = cardData.question;
+        aImg.src = cardData.answer;
 
         // Reset flip state when changing cards
         if (isFlipped) {
@@ -119,15 +141,14 @@
 
     // Update progress bar and text
     function updateProgress() {
-        const progress = ((currentIndex + 1) / TOTAL_CARDS) * 100;
+        const progress = ((currentIndex + 1) / totalCards) * 100;
         progressFill.style.width = `${progress}%`;
-        progressText.textContent = `${currentIndex + 1} / ${TOTAL_CARDS}`;
+        progressText.textContent = `${currentIndex + 1} / ${totalCards}`;
     }
 
     // Update navigation button states
     function updateNavButtons() {
         prevBtn.disabled = currentIndex === 0;
-        // Allow next if answered or on last card (to show results)
         nextBtn.disabled = false;
     }
 
@@ -141,7 +162,6 @@
 
         if (isFlipped) {
             flashcard.classList.add('flipped');
-            // Show answer prompt if not already answered
             if (!currentCardAnswered) {
                 showAnswerPrompt();
             }
@@ -169,13 +189,11 @@
         updateIndicators();
 
         // Check if all cards answered
-        if (Object.keys(answers).length === TOTAL_CARDS) {
-            // Small delay before showing results
+        if (Object.keys(answers).length === totalCards) {
             setTimeout(showResults, 500);
         } else {
-            // Auto-advance to next card after a short delay
             setTimeout(() => {
-                if (currentIndex < TOTAL_CARDS - 1) {
+                if (currentIndex < totalCards - 1) {
                     nextCard();
                 }
             }, 300);
@@ -187,7 +205,7 @@
         let correct = 0;
         let incorrect = 0;
 
-        for (let i = 0; i < TOTAL_CARDS; i++) {
+        for (let i = 0; i < totalCards; i++) {
             if (answers[i] === true) {
                 correct++;
             } else if (answers[i] === false) {
@@ -195,7 +213,7 @@
             }
         }
 
-        const percentage = Math.round((correct / TOTAL_CARDS) * 100);
+        const percentage = Math.round((correct / totalCards) * 100);
         return { correct, incorrect, percentage };
     }
 
@@ -203,25 +221,20 @@
     function showResults() {
         const results = calculateResults();
 
-        // Update UI
         correctCount.textContent = results.correct;
         incorrectCount.textContent = results.incorrect;
         competencyLevel.textContent = `${results.percentage}%`;
         statPercentage.textContent = `${results.percentage}%`;
 
-        // Animate circular progress
-        const circumference = 2 * Math.PI * 54; // r = 54
+        const circumference = 2 * Math.PI * 54;
         const offset = circumference - (results.percentage / 100) * circumference;
 
-        // Set initial state
         progressRing.style.stroke = getGradientColor(results.percentage);
         progressRing.style.strokeDasharray = circumference;
         progressRing.style.strokeDashoffset = circumference;
 
-        // Show overlay
         resultsOverlay.classList.add('visible');
 
-        // Animate after a short delay
         setTimeout(() => {
             progressRing.style.strokeDashoffset = offset;
         }, 100);
@@ -229,10 +242,10 @@
 
     // Get color based on percentage
     function getGradientColor(percentage) {
-        if (percentage >= 80) return '#10b981'; // Green
-        if (percentage >= 60) return '#6366f1'; // Purple
-        if (percentage >= 40) return '#f59e0b'; // Orange
-        return '#ef4444'; // Red
+        if (percentage >= 80) return '#10b981';
+        if (percentage >= 60) return '#6366f1';
+        if (percentage >= 40) return '#f59e0b';
+        return '#ef4444';
     }
 
     // Hide results screen
@@ -242,7 +255,7 @@
 
     // Navigate to next card
     function nextCard() {
-        if (currentIndex < TOTAL_CARDS - 1) {
+        if (currentIndex < totalCards - 1) {
             currentIndex++;
             updateCard();
             updateProgress();
@@ -262,7 +275,7 @@
 
     // Go to specific card
     function goToCard(index) {
-        if (index >= 0 && index < TOTAL_CARDS) {
+        if (index >= 0 && index < totalCards) {
             currentIndex = index;
             updateCard();
             updateProgress();
@@ -272,7 +285,6 @@
 
     // Shuffle cards (Fisher-Yates algorithm)
     function shuffleCards() {
-        // Reset answers when shuffling
         answers = {};
         currentCardAnswered = false;
 
@@ -286,7 +298,6 @@
         updateNavButtons();
         createIndicators();
 
-        // Visual feedback
         flashcard.style.transform = 'scale(0.95)';
         setTimeout(() => {
             flashcard.style.transform = '';
@@ -295,7 +306,7 @@
 
     // Reset to original order
     function resetCards() {
-        cardOrder = Array.from({ length: TOTAL_CARDS }, (_, i) => i + 1);
+        cardOrder = Array.from({ length: totalCards }, (_, i) => i);
         currentIndex = 0;
         answers = {};
         currentCardAnswered = false;
@@ -308,7 +319,6 @@
         updateNavButtons();
         createIndicators();
 
-        // Visual feedback
         flashcard.style.transform = 'scale(0.95)';
         setTimeout(() => {
             flashcard.style.transform = '';
@@ -317,10 +327,8 @@
 
     // Attach event listeners
     function attachEventListeners() {
-        // Click to flip
         flashcard.addEventListener('click', () => flipCard());
 
-        // Navigation buttons
         prevBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             prevCard();
@@ -331,7 +339,6 @@
             nextCard();
         });
 
-        // Answer buttons
         yesBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             recordAnswer(true);
@@ -342,13 +349,10 @@
             recordAnswer(false);
         });
 
-        // Restart button
         restartBtn.addEventListener('click', resetCards);
 
-        // Keyboard navigation
         document.addEventListener('keydown', handleKeydown);
 
-        // Touch/swipe support
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -367,10 +371,8 @@
 
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
-                    // Swipe left - next card
                     nextCard();
                 } else {
-                    // Swipe right - previous card
                     prevCard();
                 }
             }
@@ -379,7 +381,6 @@
 
     // Keyboard handler
     function handleKeydown(e) {
-        // Don't handle if results overlay is visible
         if (resultsOverlay.classList.contains('visible')) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -408,10 +409,10 @@
         }
     }
 
-    // Initialize when DOM is ready
+    // Start by loading cards from JSON
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', loadCards);
     } else {
-        init();
+        loadCards();
     }
 })();
