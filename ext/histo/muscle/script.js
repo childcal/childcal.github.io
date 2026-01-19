@@ -18,8 +18,6 @@
     const answerImg = document.getElementById('answerImg');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const shuffleBtn = document.getElementById('shuffleBtn');
-    const resetBtn = document.getElementById('resetBtn');
     const progressFill = document.getElementById('progressFill');
     const progressText = document.getElementById('progressText');
     const cardIndicators = document.getElementById('cardIndicators');
@@ -325,10 +323,6 @@
             nextCard();
         });
 
-        // Control buttons
-        shuffleBtn.addEventListener('click', shuffleCards);
-        resetBtn.addEventListener('click', resetCards);
-
         // Answer buttons
         yesBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -401,18 +395,6 @@
             case 'N':
                 if (isFlipped && !currentCardAnswered) {
                     recordAnswer(false);
-                }
-                break;
-            case 'r':
-            case 'R':
-                if (!e.ctrlKey && !e.metaKey) {
-                    resetCards();
-                }
-                break;
-            case 's':
-            case 'S':
-                if (!e.ctrlKey && !e.metaKey) {
-                    shuffleCards();
                 }
                 break;
         }
