@@ -74,9 +74,15 @@
     function updateCard() {
         const cardNumber = cardOrder[currentIndex];
 
+        // Get card face elements
+        const frontFace = document.querySelector('.flashcard-front');
+        const backFace = document.querySelector('.flashcard-back');
+
         // Add loading state
         questionImg.classList.add('loading');
         answerImg.classList.add('loading');
+        frontFace.classList.add('is-loading');
+        backFace.classList.add('is-loading');
 
         // Preload images
         const qImg = new Image();
@@ -85,11 +91,13 @@
         qImg.onload = () => {
             questionImg.src = `img/${cardNumber}-Q.png`;
             questionImg.classList.remove('loading');
+            frontFace.classList.remove('is-loading');
         };
 
         aImg.onload = () => {
             answerImg.src = `img/${cardNumber}-A.png`;
             answerImg.classList.remove('loading');
+            backFace.classList.remove('is-loading');
         };
 
         qImg.src = `img/${cardNumber}-Q.png`;
