@@ -15,8 +15,6 @@
     const flashcard = document.getElementById('flashcard');
     const questionImg = document.getElementById('questionImg');
     const answerImg = document.getElementById('answerImg');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
     const progressFill = document.getElementById('progressFill');
     const progressText = document.getElementById('progressText');
     const cardIndicators = document.getElementById('cardIndicators');
@@ -59,7 +57,6 @@
         createIndicators();
         updateCard();
         updateProgress();
-        updateNavButtons();
         attachEventListeners();
     }
 
@@ -144,12 +141,6 @@
         const progress = ((currentIndex + 1) / totalCards) * 100;
         progressFill.style.width = `${progress}%`;
         progressText.textContent = `${currentIndex + 1} / ${totalCards}`;
-    }
-
-    // Update navigation button states
-    function updateNavButtons() {
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = false;
     }
 
     // Flip the card
@@ -259,7 +250,6 @@
             currentIndex++;
             updateCard();
             updateProgress();
-            updateNavButtons();
         }
     }
 
@@ -269,7 +259,6 @@
             currentIndex--;
             updateCard();
             updateProgress();
-            updateNavButtons();
         }
     }
 
@@ -279,7 +268,6 @@
             currentIndex = index;
             updateCard();
             updateProgress();
-            updateNavButtons();
         }
     }
 
@@ -295,7 +283,6 @@
         currentIndex = 0;
         updateCard();
         updateProgress();
-        updateNavButtons();
         createIndicators();
 
         flashcard.style.transform = 'scale(0.95)';
@@ -316,7 +303,6 @@
         hideResults();
         updateCard();
         updateProgress();
-        updateNavButtons();
         createIndicators();
 
         flashcard.style.transform = 'scale(0.95)';
@@ -328,16 +314,6 @@
     // Attach event listeners
     function attachEventListeners() {
         flashcard.addEventListener('click', () => flipCard());
-
-        prevBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            prevCard();
-        });
-
-        nextBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            nextCard();
-        });
 
         yesBtn.addEventListener('click', (e) => {
             e.stopPropagation();
